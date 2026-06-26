@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ブロックくずされるな</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="title-screen" id="titleScreen" aria-label="Title screen">
+      <h1>ブロックくずされるな</h1>
+      <p class="title-message" id="titleMessage">消えないように。<br />Good luck.</p>
+      <button id="startGame" type="button">START</button>
+    </section>
+
+    <main class="shell">
+      <section class="hud" aria-label="Game status">
+        <div>
+          <span class="label">SCORE</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span class="label">BEST</span>
+          <strong id="best">0</strong>
+        </div>
+        <div>
+          <span class="label">BLOCKS</span>
+          <strong id="lives">3</strong>
+        </div>
+        <button id="styleToggle" type="button">Retro</button>
+        <button id="controlsToggle" type="button" aria-pressed="false">Controller OFF</button>
+        <button id="restart" type="button">Restart</button>
+      </section>
+
+      <canvas id="game" width="960" height="640" aria-label="Block runner breakout game"></canvas>
+
+      <section class="controls" id="controls" aria-label="Touch controls">
+        <button class="pad up" type="button" data-dir="up" aria-label="Move up">↑</button>
+        <button class="pad left" type="button" data-dir="left" aria-label="Move left">←</button>
+        <button class="pad down" type="button" data-dir="down" aria-label="Move down">↓</button>
+        <button class="pad right" type="button" data-dir="right" aria-label="Move right">→</button>
+        <button class="pad switch" id="switchBlock" type="button" aria-label="Switch block">SW</button>
+      </section>
+
+      <section class="rules" aria-label="Game rules">
+        <h1>あそびかた</h1>
+        <ul>
+          <li>あなたは壁の中にある操作ブロックです。ボールに当たらないように逃げ続けることが目的のゲームです。</li>
+          <li>PCでは矢印キーまたはWASDで移動します。スペースキーで操作するブロックを切り替えます。</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="game2.js"></script>
+  </body>
+</html>
